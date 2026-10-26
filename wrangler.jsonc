@@ -1,15 +1,9 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "thai-passport",
-  "main": "src/worker.js",
+  "main": "worker.js",
   "compatibility_date": "2026-10-26",
   "observability": { "enabled": true },
-  "assets": {
-    "directory": "./public",
-    "binding": "ASSETS",
-    "run_worker_first": ["/api/*"]
-  },
-  // No database_id: Wrangler creates the D1 database automatically on first deploy.
   "d1_databases": [
     { "binding": "DB", "database_name": "thai-passport-db" }
   ]
